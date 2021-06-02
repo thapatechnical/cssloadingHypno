@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #00796b;
+      }
+
+      .center-div {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .outer-ring {
+        width: 100px;
+        height: 100px;
+        border-top: 4px solid #bdbdbd;
+        border-bottom: 4px solid #bdbdbd;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        border-radius: 50%;
+        position: absolute;
+        animation: rototering 2s linear infinite;
+      }
+      .middle-ring {
+        width: 80px;
+        height: 80px;
+        border-top: 4px solid white;
+        border-bottom: 4px solid white;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        border-radius: 50%;
+        position: absolute;
+        animation: rototering 2s linear infinite reverse;
+      }
+      .inner-ring {
+        width: 60px;
+        height: 60px;
+        border-top: 4px solid #bdbdbd;
+        border-bottom: 4px solid #bdbdbd;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        border-radius: 50%;
+        position: absolute;
+        animation: rototering 2s linear infinite;
+      }
+
+      .dot {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #b2dfdb;
+        position: absolute;
+        animation: rototering 2s linear infinite;
+      }
+
+      @keyframes rototering {
+        0% {
+          transform: rotate(0deg) scale(0.3);
+        }
+        100% {
+          transform: rotate(360deg) scale(1.2);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center-div">
+      <div class="outer-ring"></div>
+      <div class="middle-ring"></div>
+      <div class="inner-ring"></div>
+      <div class="dot"></div>
+    </div>
+  </body>
+</html>

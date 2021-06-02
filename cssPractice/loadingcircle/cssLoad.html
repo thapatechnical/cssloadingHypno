@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #85cef8;
+      }
+
+      .center-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .outer-ring {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        /* background-color: grey; */
+        /* subscribe to Thapa Technical Youtube Channel \
+          youtube.com/thapatechnical
+        */
+        border-top: 8px solid #01466d;
+        border-bottom: 8px solid #01466d;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        position: absolute;
+        animation: rototering 1s linear infinite;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+
+      .middle-ring {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        /* background-color: grey; */
+        border-left: 8px solid white;
+        border-right: 8px solid white;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        position: absolute;
+        animation: rototering 1s linear infinite reverse;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+
+      .middle-ring2 {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        /* background-color: grey; */
+        border-left: 8px solid white;
+        border-right: 8px solid white;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        position: absolute;
+        animation: rototering 1s linear infinite reverse;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+
+      .inner-ring {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        /* background-color: grey; */
+        border-top: 8px solid #01466d;
+        border-bottom: 8px solid #01466d;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        position: absolute;
+        animation: rototering 1s linear infinite;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+
+      .inner-ring2 {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        /* background-color: grey; */
+        border-top: 8px solid #01466d;
+        border-bottom: 8px solid #01466d;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        position: absolute;
+        animation: rototering 1s linear infinite;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+
+      .dot {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: white;
+        animation: rototering 1s linear infinite;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+
+      /* @keyframes rototering {
+        0% {
+          transform: rotate(0deg) scale(0.5);
+        }
+        100% {
+          transform: rotate(360deg) scale(1.2);
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="center-div">
+      <div class="outer-ring"></div>
+      <div class="middle-ring"></div>
+      <div class="middle-ring2"></div>
+      <div class="inner-ring"></div>
+      <div class="inner-ring2"></div>
+      <div class="dot"></div>
+    </div>
+  </body>
+</html>
