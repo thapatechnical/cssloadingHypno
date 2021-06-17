@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: rgb(253, 254, 255);
+      }
+      .center-div {
+        width: 60%;
+        height: 60rem;
+        position: relative;
+        background-color: #e8e5e3;
+        border-radius: 2rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      .clip {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: inherit;
+        transition: all 0.5s linear;
+        border-radius: 2rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+
+      .img1 {
+        background-image: url("https://images.pexels.com/photos/4993100/pexels-photo-4993100.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        background-size: contain;
+        background-position: center;
+      }
+
+      .img2 {
+        background-image: url("https://images.pexels.com/photos/6850685/pexels-photo-6850685.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        background-size: contain;
+        background-position: right;
+        clip-path: polygon(75% 0, 100% 0, 100% 100%, 61% 100%);
+      }
+
+      .img3 {
+        background-image: url("https://images.pexels.com/photos/6850753/pexels-photo-6850753.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        background-position: left;
+        background-size: contain;
+        clip-path: polygon(0 0, 25% 0, 40% 100%, 0 100%);
+      }
+
+      .center-div:hover .clip {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      }
+
+      .center-div .clip:hover {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center-div">
+      <div class="clip img1"></div>
+
+      <div class="clip img2"></div>
+
+      <div class="clip img3"></div>
+    </div>
+  </body>
+</html>
