@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62.5%;
+        font-family: Muli;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh;
+        background-color: #212f3d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* #2db6e1; */
+      a {
+        width: 20rem;
+        height: 10rem;
+        text-decoration: none;
+      }
+
+      span {
+        padding: 2rem 4rem;
+        font-size: 3rem;
+        text-transform: uppercase;
+        position: absolute;
+        transition: all 0.3s linear;
+      }
+
+      span:first-child {
+        background-color: #2db6e1;
+        color: #fff;
+      }
+
+      span:last-child {
+        background-color: #fff;
+        color: #2db6e1;
+        clip-path: polygon(76% 0, 100% 0, 100% 100%, 40% 100%);
+      }
+      span:last-child:hover {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+
+      span:first-child:hover ~ span {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 99%);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA">
+      <span>sign in </span>
+      <span>sign in </span>
+    </a>
+  </body>
+</html>
